@@ -174,7 +174,7 @@ WBS 结构层次越往下层则项目组成部分的定义越详细，WBS 最后
 
 #### 11. 功能点计算的大致过程
 
-![FP](/Users/Sean/Desktop/FP.png)
+![image](https://github.com/SeanCST/USTC/blob/master/Semester1/images/FP.png)
 
 #### 12. 制定进度计划的常见技术是？
 
