@@ -598,8 +598,6 @@ Work Breakdown Structure 任务分解结构
 
 #### 11. 功能点计算的大致过程
 
- ![FP](/Users/Sean/Desktop/复习 md/USTC/Semester1/images/FP.png)
-
 ![image](https://github.com/SeanCST/USTC/blob/master/Semester1/images/FP.png)
 
 #### 11.1 FP 计算：FP = CT * [0.65 + 0.01 * ∑Fi ]
@@ -1068,12 +1066,17 @@ Work Breakdown Structure 任务分解结构
 #### 3. 结构化分析模型包含什么？
 
 * 数据建模和对象描述
+
 * 功能建模和数据流图 
+
 * 基本加工逻辑说明
+
 * 行为建模
+
 * 数据词典
 
-  ![结构化分析模型](/Users/Sean/Desktop/复习 md/USTC/Semester1/images/结构化分析模型.png)
+  ![image](https://github.com/SeanCST/USTC/blob/master/Semester1/images/结构化分析模型.png)
+
 
 #### 3.1 基本思想
 
@@ -1164,7 +1167,7 @@ Work Breakdown Structure 任务分解结构
 * 普遍联系：世界上各种对象形成了一张复杂的耦合网，正因为有耦合的存在，世界才能演进。正如马克思主义哲学所说：联系是普遍的、客观的。所以，耦合的存在，有其深刻的哲学意义。
 * 什么是耦合？可以看成联系，耦合的存在是世界演进的途径，如果没有耦合，世界就变成了“死世界”，无法演进和发展。所以，世界需要耦合 。我们在开发设计中要降低耦合，但并不是要取消耦合。
 
-![耦合泛化](/Users/Sean/Desktop/复习 md/USTC/Semester1/images/耦合泛化.png)
+![image](https://github.com/SeanCST/USTC/blob/master/Semester1/images/耦合泛化.png)
 
 其中汽车和交通工具属于**泛化耦合**，轮子和方向盘**组合**于汽车，汽车**聚合**成车队，而汽车和司机具有**依赖**关系。
 
@@ -1324,11 +1327,11 @@ Work Breakdown Structure 任务分解结构
 * **扩展关系**：扩展关系是从扩展用例到基本用例的关系，它说明为扩展用例定义的行为如何插入到为基本用例定义的行为中。侧重表示扩展用例的触发不定性。
 * **泛化关系**：用例可以被特别列举为一个或多个子用例，这被称做用例泛化。侧重表示了用例间的互斥性。
 
-![包含关系](/Users/Sean/Desktop/复习 md/USTC/Semester1/images/包含关系.png)
+![image](https://github.com/SeanCST/USTC/blob/master/Semester1/images/包含关系.png)
 
-![扩展关系](/Users/Sean/Desktop/复习 md/USTC/Semester1/images/扩展关系.png)
+![image](https://github.com/SeanCST/USTC/blob/master/Semester1/images/扩展关系.png)
 
-![泛化关系](/Users/Sean/Desktop/复习 md/USTC/Semester1/images/泛化关系.png)
+![image](https://github.com/SeanCST/USTC/blob/master/Semester1/images/泛化关系.png)
 
 #### 3. 程序员关注哪些图？
 
