@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  SA18225410_实验3
+//  SA18225410_肖恩伟_实验4
 //
-//  Created by SeanCST on 2018/12/6.
+//  Created by SeanCST on 2018/12/20.
 //  Copyright © 2018 NilOrg. All rights reserved.
 //
 
@@ -20,9 +20,6 @@
     return YES;
 }
 
-- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(nullable UIWindow *)window {
-    return UIInterfaceOrientationMaskPortrait;
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

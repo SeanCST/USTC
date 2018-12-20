@@ -7,10 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "Calculator.h"
+//#import "Calculator.h"
+#import "AdvancedCalculator.h"
+#import "SecondViewController.h"
 
 @interface ViewController ()
-@property (nonatomic, strong) Calculator *calculator;
+@property (nonatomic, strong) AdvancedCalculator *calculator;
 @property (weak, nonatomic) IBOutlet UILabel *textDisplay;
 
 @end
@@ -19,7 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.textDisplay.text = self.calculator.screen;
 }
 
 - (IBAction)inputNumber:(UIButton *)sender {
@@ -34,6 +39,7 @@
     }
     
     [str appendString:sender.titleLabel.text];
+    self.calculator.screen = str;
     self.textDisplay.text = str;
 }
 
@@ -43,23 +49,34 @@
 }
 
 - (IBAction)delNumber:(UIButton *)sender {
-    long len = self.textDisplay.text.length - 1;
-    if (len >= 0) {
-        NSMutableString *str = [NSMutableString stringWithString:self.textDisplay.text];
-        [str deleteCharactersInRange:NSMakeRange(len, 1)];
-        self.textDisplay.text = str;
-    }
+//    long len = self.textDisplay.text.length - 1;
+//    if (len >= 0) {
+//        NSMutableString *str = [NSMutableString stringWithString:self.textDisplay.text];
+//        [str deleteCharactersInRange:NSMakeRange(len, 1)];
+//        self.textDisplay.text = str;
+//    }
     
     [self.calculator delNumber];
+    self.textDisplay.text = self.calculator.screen;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"SecondScene"]) {
+        if ([segue.destinationViewController isKindOfClass:[SecondViewController class]]) {
+            SecondViewController *svc = (SecondViewController *)segue.destinationViewController;
+            svc.advancedCalculator = self.calculator;
+        }
+    }
 }
 
 - (IBAction)compute:(UIButton *)sender {
     self.textDisplay.text = [self.calculator computeResult];
+    self.calculator.screen = [NSMutableString stringWithString:self.textDisplay.text];
 }
 
-- (Calculator *)calculator {
+- (AdvancedCalculator *)calculator {
     if (!_calculator) {
-        _calculator = [[Calculator alloc] init];
+        _calculator = [[AdvancedCalculator alloc] init];
     }
     return _calculator;
 }

@@ -20,7 +20,7 @@
 
 - (NSString *)computeResult {
     @try {
-        NSExpression *exp1 = [NSExpression expressionWithFormat:self.disp];
+        NSExpression *exp1 = [NSExpression expressionWithFormat:[self dispConvertToFloat]];
         id value = [exp1 expressionValueWithObject:nil context:nil];
         self.disp = [NSMutableString stringWithString:[value stringValue]];
         
@@ -32,6 +32,29 @@
         self.disp = nil;
         return @"error";
     }
+}
+
+- (NSString *)dispConvertToFloat {
+    NSMutableString *floatStr = self.disp;
+//    floatStr = [floatStr stringByReplacingOccurrencesOfString:@"+" withString:@".0+"];
+//    floatStr = [floatStr stringByReplacingOccurrencesOfString:@"-" withString:@".0-"];
+//    floatStr = [floatStr stringByReplacingOccurrencesOfString:@"*" withString:@".0*"];
+//    floatStr = [floatStr stringByReplacingOccurrencesOfString:@"/" withString:@".0/"];
+//    floatStr = [floatStr stringByAppendingString:@".0"];
+    
+    for (int i = 0; i < floatStr.length; i++) {
+        NSString *s = [floatStr substringWithRange:NSMakeRange(i, 1)];
+        if ([s isEqualToString:@"." ]) {
+            break;
+        }
+        
+        if ([s isEqualToString:@"/"] || [s isEqualToString:@"*"] || [s isEqualToString:@"+"] || [s isEqualToString:@"-"] || [s isEqualToString:@")"]) {
+            [floatStr insertString:@".0" atIndex:i];
+            break;
+        }
+    }
+    
+    return floatStr;
 }
 
 - (NSMutableString *)disp {
