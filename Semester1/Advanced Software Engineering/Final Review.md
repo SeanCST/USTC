@@ -1346,7 +1346,7 @@ Work Breakdown Structure 任务分解结构
 * 上述四种关系的亲密程度：**依赖 < 关联 < 聚合 < 组合**
 * **泛化（继承）**：表示一般与特殊的关系，用一条实线加空心箭头来表示
 
-![类之间的关系](/Users/Sean/Desktop/复习 md/USTC/Semester1/images/类之间的关系.png)
+![image](https://github.com/SeanCST/USTC/blob/master/Semester1/images/类之间的关系.png)
 
 
 
@@ -1498,7 +1498,7 @@ Work Breakdown Structure 任务分解结构
   * 逻辑内聚：块内任务间在逻辑上相似或相同，例如求某班的平均分和最高分，因其输入和输出相同而安排在一个模块内完成。
   * 偶然（巧合）内聚：一个模块所完成的几个任务之间关系松散，互不相关。主要是为了避免重复书写而把重复的代码集成到一个模块内。
 
-  ![内聚](/Users/Sean/Desktop/复习 md/USTC/Semester1/images/内聚.jpeg)
+  ![image](https://github.com/SeanCST/USTC/blob/master/Semester1/images/内聚.jpeg)
 
 #### 4. 解释一下标记耦合和数据耦合？
 
