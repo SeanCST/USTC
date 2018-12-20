@@ -1368,7 +1368,7 @@ Work Breakdown Structure 任务分解结构
 * 回答（概念设计要回答的问题）：
   * Where will the data come from 数据来自何地？
   * What will happen to the data in the system 系统中的数据会发生什么情况?
-  * What will the system look like to users 系统对用户来说看起来像什么？
+  * What will the system look like to users 系统对用户来说看起来象什么？
   * What choices will be offered to users 能向用户提􏰃供什么选择?
   * What is the timing of events 事件的时间安排如何？
   * What will the reports and screens look like 报告和屏幕看起来像什么？
